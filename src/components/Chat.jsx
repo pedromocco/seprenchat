@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
-import {
-  query,
-  collection,
-  orderBy,
-  onSnapshot,
-} from "firebase/firestore";
+import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
 import Messages from "./Messages";
 import SendMessage from "./SendMessage";
 
@@ -27,14 +22,15 @@ const Chat = () => {
   }, []);
 
   return (
-    <section className="chat-content">
-      {messages &&
-        messages.map((item) => (
-          <Messages key={item.id} message={item.content} />
-        ))}
-
-      <SendMessage />
-    </section>
+    <>
+      <section className="chat-content">
+        {messages &&
+          messages.map((item) => (
+            <Messages key={item.id} message={item.content} />
+          ))}
+        <SendMessage />
+      </section>
+    </>
   );
 };
 

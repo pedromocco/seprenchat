@@ -206,7 +206,7 @@ form button i {
     width: 100%;
     border-radius: 25px;
     padding: 10px;
-    height: 80vh;
+    height: 74vh;
     overflow: auto;
   }
 
@@ -301,13 +301,10 @@ form button i {
     margin-top: 3px;
   }
   .cardi {
-    margin: 0%;
-    display: list-item;
-    align-items: center;
-    margin-left: 73px;
+    height: 130px;
   }
   .card-user {
-    background-color: rgba(185, 16, 16, 0.034);
+    background-color: rgba(27, 16, 185, 0.158);
     margin-top: 20px;
     height: 10%;
     display: flex;

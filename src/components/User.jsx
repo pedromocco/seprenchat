@@ -12,7 +12,7 @@ const User = () => {
 
   return (
     <>
-      <div className="">
+      <div className="cardi">
       <h1> <i className="fa-solid fa-fire"></i> SeprenChat</h1>
         <article className="card-user">
           <img src={image} alt="userImage" referrerPolicy="" />
