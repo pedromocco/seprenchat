@@ -1,0 +1,377 @@
+.App {
+  text-align: center;
+  width: 70%;
+  margin: 2% auto;
+  display: flex;
+  gap: 20px;
+}
+
+/* Chat Section */
+.chat-content {
+  background-color: rgba(66, 66, 138, 0.116);
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 39px;
+  height: 80vh;
+  overflow: auto;
+}
+
+/* Message Section */
+.message {
+  color: #0000009c;
+  text-align: left;
+  margin-bottom: 10px;
+  display: flex;
+}
+.message .text-message {
+  background-color: #482d66;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 0 14px;
+}
+.message > div {
+  display: inline-block;
+  order: 1;
+}
+.message img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-right: 10px;
+  object-fit: cover;
+  order: 0;
+}
+.message p.text {
+  color: #fff;
+  line-height: 15px;
+}
+.message p.user {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.my-message {
+  color: #0000009c;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.my-message .text-message {
+  background-color: #e2dcfdcb;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 0 14px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.my-message > div {
+  display: inline-block;
+}
+.my-message img {
+  width: 45px;
+  border-radius: 50%;
+  vertical-align: top;
+  margin-left: 10px;
+}
+.my-message p.text {
+  color: #04003a;
+  line-height: 15px;
+}
+.my-message p.user {
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+/* Send Message Component */
+form {
+  background-color: rgba(5, 5, 10, 0.205);
+  padding: 20px 20px;
+  border-radius: 40px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  position: relative;
+}
+input[type="text"] {
+  border: solid 2px #c4c9d8;
+  padding: 14px 12px;
+  font-size: inherit;
+  border-radius: 30px;
+  outline: none;
+  flex-grow: 6;
+}
+form button {
+  background-color: #3610c0c4;
+  padding: 15px 0;
+  font-size: inherit;
+  border-radius: 30px;
+  outline: none;
+  border: 0px;
+  color: #fff;
+  flex-grow: 2;
+  transition: 0.1s;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #3a0963;
+}
+form button i {
+  padding-left: 6px;
+}
+
+/* styles to scroll bar */
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1a233b;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d0ced4;
+}
+
+/* User Component */
+.right-side {
+  width: 20%;
+}
+.right-side h1 i {
+  margin-right: 10px;
+}
+.card-user {
+  border-radius: 25px;
+  background-color: rgba(66, 66, 138, 0.116);
+  height: 20vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-user p {
+  font-weight: 500;
+}
+.card-user img {
+  width: 70px;
+  border-radius: 50%;
+  display: block;
+}
+/* Login Btn */
+.btn-login {
+  font-size: inherit;
+  background-color: #4082ed;
+  outline: none;
+  color: #fff;
+  padding: 0 9px 0 0;
+  border: 2px solid #4082ed;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-login i {
+  background-color: #fff;
+  color: #4082ed;
+  padding: 5px;
+  border-radius: 20px;
+  margin-right: 8px;
+  font-size: 22px;
+}
+.btn-login.btn-logout {
+  background-color: #74777a;
+  border: 2px solid #74777a;
+  padding: 8px;
+}
+.btn-login.btn-logout i {
+  font-size: 20px;
+  color: #a0a3a7;
+}
+
+@media (max-width: 678px) {
+  .App {
+    flex-wrap: wrap;
+    text-align: center;
+    width: 98%;
+  }
+
+  .chat-content {
+    background-color: rgba(66, 66, 138, 0.116);
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+    height: 80vh;
+    overflow: auto;
+  }
+
+  form {
+    background-color: rgba(5, 5, 10, 0.205);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2%;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  /* Message Section */
+  .time {
+    font-size: 11px;
+  }
+  .message {
+    color: #0000009c;
+    text-align: left;
+    margin-bottom: 1px;
+    display: flex;
+  }
+  .message .text-message {
+    background-color: #482d66;
+    border-radius: 25%;
+    padding: 2 4px;
+  }
+  .message > div {
+    order: 1;
+  }
+  .message img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-right: 10px;
+    object-fit: cover;
+    order: 0;
+  }
+  .message p.text {
+    color: #fff;
+    line-height: 15px;
+  }
+  .message p.user {
+    font-size: 15px;
+    margin-top: 1px;
+  }
+  .my-message {
+    color: #0000009c;
+    text-align: right;
+    margin-bottom: 1px;
+  }
+  .my-message .text-message {
+    background-color: #e2dcfdcb;
+    border-radius: 12px;
+    padding: 0 14px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  }
+  .my-message img {
+    width: 20px;
+    border-radius: 50%;
+    vertical-align: top;
+  }
+  .my-message p.text {
+    color: #04003a;
+    line-height: 15px;
+  }
+  .my-message p.user {
+    font-size: 14px;
+    margin-top: 3px;
+  }
+  .cardi {
+    margin: 0%;
+    display:list-item;
+    align-items: center;
+    margin-left: 73px;
+  }
+  .card-user {
+    background-color: rgba(185, 16, 16, 0.034);
+    margin-top: 20px;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+  }
+  .card-user p {
+    font-weight: 500;
+  }
+  .card-user img {
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  /* Login Btn */
+.btn-login {
+  background-color: #4082ed;
+  outline: none;
+  color: #fff;
+  padding: 0 9px 0 0;
+  border: 2px solid #4082ed;
+  cursor: pointer;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-login i {
+  background-color: #fff;
+  color: #4082ed;
+  padding: 5px;
+  border-radius: 20px;
+  margin-right: 8px;
+  font-size: 22px;
+}
+.btn-login.btn-logout {
+  background-color: #74777a;
+  border: 2px solid #74777a;
+  padding: 8px;
+}
+.btn-login.btn-logout i {
+  font-size: 10px;
+  color: #a0a3a7;
+}
+}
+
+/* Emojis */
+.open {
+  display: block;
+  position: absolute;
+  top: -347px;
+}
+.close {
+  display: none;
+}
+button.close-emoji {
+  position: relative;
+  right: -46%;
+  top: 2px;
+  padding: 2px;
+  background-color: #ffffff00;
+}
+button.close-emoji:hover {
+  background-color: #ffffff00;
+}
+button.close-emoji i {
+  color: #004dfc;
+}
+.btn-emoji {
+  padding: 0;
+  flex-grow: 1;
+}
+.btn-emoji i {
+  font-size: 24px;
+  padding-left: 0;
+}
+/* author */
+p.author {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  gap: 7px;
+}
+p.author a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+}
